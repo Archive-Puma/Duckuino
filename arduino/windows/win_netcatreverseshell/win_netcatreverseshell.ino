@@ -2,7 +2,7 @@
 
 #define defaultDelay 200
 
-String netcaturl = "https://drive.google.com/uc?export=download&id=1ZzdBngef2MvXEDXbY9YkmE7CO9CwozRl";
+String netcaturl = ""; // NETCAT DIRECT LINK DOWNLOAD
 
 void ENTER()
 {
